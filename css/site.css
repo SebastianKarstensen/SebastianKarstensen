@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Quicksand", sans-serif;
+}
+
+html {
+	min-height: 100%;
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#body {
+	background-color: transparent;
+	position: relative;
+}
+
+header {
+	padding-top: 1vh;
+}
+
+/*General + navbar*/
+/*-------------------------------------*/
+#homepage {
+	text-decoration: none;
+}
+
+#navigation-bar {
+	background-color: transparent;
+	border-color: transparent;
+	margin-bottom: 0;
+}
+
+#logo-letters {
+	font-size: 42px;
+	display: inline-block;
+	color: white;
+}
+
+#logo-name {
+	display: inline-block;
+	color: white;
+}
+
+.name {
+	font-size: 16px;
+	margin: 0;
+}
+
+#subpage-navbar-collapse {
+	padding: 0;
+	background-color: rgba(24,24,24,0.6);
+	border-top: 2px solid white;
+}
+
+#menu-button {
+	margin-right: 0;
+	padding: 0;
+	border-color: transparent;
+}
+
+#menu-button:hover {
+	background-color: transparent;
+}
+
+#menu-button:hover span {
+	background-color: white;
+}
+
+#menu-button span {
+	background-color: white;
+	margin: 8px 0px;
+	width: 32px;
+	height: 4px;
+	border-radius: 2px;
+}
+
+#navigation {
+	text-align: center;
+	display: inline;
+	margin: 0;
+}
+
+#navigation li a {
+	color: white;
+	font-size: 20px;
+	margin: 0;
+	display: inline-block;
+}
+
+#current-page .mark-page {
+	color: black;
+	background-color: white;
+}
+
+/*
+#navigation li a:active {
+	color: black;
+	background-color: white;
+}*/
+
+#splitter {
+	height: 2px;
+	background-color: white;
+	border-radius: 1px;
+}
+
+#contact-info {
+	text-align: center;
+	position: fixed;
+	bottom: 5%;
+	width: 100%;
+	left: 0;
+}
+
+.contact-link {
+	display: inline-block;
+	margin: 0 12px;
+}
+
+.contact-link a img {
+	height: 7.5vh;
+}
+
+/* Desktop and tablet */
+@media screen and (min-width: 768px) {
+	#logo-letters {
+		font-size: 64px;
+	}
+
+	.name {
+		font-size: 25px;
+	}
+
+	#subpage-navbar-collapse {
+		background-color: transparent;
+		border-top: none;
+	}
+
+	#navigation {
+		float: right;
+		padding-top: 22px;
+	}
+
+    #navigation li a {
+    	margin: 0;
+    	margin-left: 10px;
+    	border-radius: 4px;
+    }
+
+    #navigation li a:hover {
+    	color: black;
+    	background-color: white;
+    }
+
+    .contact-link a img {
+    	height: 5vh;
+    }
+
+    .contact-link {
+    	margin: 0 30px;
+    }
+}
+/*-------------------------------------*/
+
+/*Projects*/
+/*-------------------------------------*/
+#projects {
+	padding: 0;
+}
+
+.card {
+	padding: 20px 0;
+}
+
+.project {
+	color: white;
+	background-color: rgba(24,24,24,0.7);
+	border: 2px solid white;
+	padding: 15px;
+}
+
+.project-name {
+	text-align: center;
+	margin: 0;
+	font-size: 22px;
+}
+
+.project-image {
+	margin: 10px 0;
+	border: 1px solid white;
+}
+
+.project-description {
+	margin: 0;
+	text-align: justify;
+}
+
+
+/* Desktop and tablet */
+@media screen and (min-width: 768px) {
+	.project {
+		min-height: 440px;
+	}
+}
+/*-------------------------------------*/
+
+
+/*Videos*/
+/*-------------------------------------*/
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.1708%;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*-------------------------------------*/
+
+
+/*About*/
+/*-------------------------------------*/
+.summary {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 24px;
+	color: white;
+}
+
+.about-name {
+	text-align: center;
+	margin: 10px 0;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+.about-list {
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	font-size: 20px;
+	line-height: 3;
+	font-style: italic;
+}
+
+/*-------------------------------------*/
