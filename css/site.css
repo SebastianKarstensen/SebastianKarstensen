@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
+/*Declare variables*/
+:root{
+    --white:#fefefe;
+    --black:#0f0f0f;
+   	--transparent-black: rgba(24,24,24,0.65);
+}
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -38,12 +46,12 @@ header {
 #logo-letters {
 	font-size: 42px;
 	display: inline-block;
-	color: white;
+	color: var(--white);
 }
 
 #logo-name {
 	display: inline-block;
-	color: white;
+	color: var(--white);
 }
 
 .name {
@@ -53,8 +61,8 @@ header {
 
 #subpage-navbar-collapse {
 	padding: 0;
-	background-color: rgba(24,24,24,0.6);
-	border-top: 2px solid white;
+	background-color: var(--transparent-black);
+	border-top: 2px solid var(--white);
 }
 
 #menu-button {
@@ -68,11 +76,11 @@ header {
 }
 
 #menu-button:hover span {
-	background-color: white;
+	background-color: var(--white);
 }
 
 #menu-button span {
-	background-color: white;
+	background-color: var(--white);
 	margin: 8px 0px;
 	width: 32px;
 	height: 4px;
@@ -86,26 +94,26 @@ header {
 }
 
 #navigation li a {
-	color: white;
+	color: var(--white);
 	font-size: 20px;
 	margin: 0;
 	display: inline-block;
 }
 
 #current-page .mark-page {
-	color: black;
-	background-color: white;
+	color: var(--black);
+	background-color: var(--white);
 }
 
 /*
 #navigation li a:active {
-	color: black;
-	background-color: white;
+	color: var(--black);
+	background-color: var(--white);
 }*/
 
 #splitter {
 	height: 2px;
-	background-color: white;
+	background-color: var(--white);
 	border-radius: 1px;
 }
 
@@ -126,7 +134,9 @@ header {
 	height: 7.5vh;
 }
 
+
 /* Desktop and tablet */
+/*-------------------------------------*/
 @media screen and (min-width: 768px) {
 	#logo-letters {
 		font-size: 64px;
@@ -153,8 +163,8 @@ header {
     }
 
     #navigation li a:hover {
-    	color: black;
-    	background-color: white;
+    	color: var(--black);
+    	background-color: var(--white);
     }
 
     .contact-link a img {
@@ -178,9 +188,9 @@ header {
 }
 
 .project {
-	color: white;
-	background-color: rgba(24,24,24,0.7);
-	border: 2px solid white;
+	color: var(--white);
+	background-color: var(--transparent-black);
+	border: 2px solid var(--white);
 	padding: 15px;
 }
 
@@ -192,7 +202,7 @@ header {
 
 .project-image {
 	margin: 10px 0;
-	border: 1px solid white;
+	border: 1px solid var(--white);
 }
 
 .project-description {
@@ -209,6 +219,27 @@ header {
 }
 /*-------------------------------------*/
 
+
+/*Prototypes*/
+/*-------------------------------------*/
+.prototype-details {
+	color: var(--white);
+}
+
+.prototype-name {
+	text-align: center;
+}
+
+.text-segment {
+	margin: 20px 0;
+}
+
+.prototype-image {
+	margin-top: 20px;
+	width: 100%;
+	border: 2px solid var(--white);
+}
+/*-------------------------------------*/
 
 /*Videos*/
 /*-------------------------------------*/
@@ -236,7 +267,7 @@ header {
 	text-align: center;
 	margin: 20px 0;
 	font-size: 24px;
-	color: white;
+	color: var(--white);
 }
 
 .about-name {
