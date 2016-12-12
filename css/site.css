@@ -187,6 +187,10 @@ header {
 	padding: 20px 0;
 }
 
+.project.prototype:hover {
+	background: rgba(11, 53, 119, 0.6);
+}
+
 .project {
 	color: var(--white);
 	background-color: var(--transparent-black);
@@ -235,7 +239,6 @@ header {
 }
 
 .prototype-image {
-	margin-top: 20px;
 	width: 100%;
 	border: 2px solid var(--white);
 }

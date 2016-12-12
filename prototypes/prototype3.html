@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html id="front-html">
+<html id="front-html" class="prototype3">
 
 <head>
 	<meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
 	<link rel="shortcut icon" href="../images/website-icon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
-	<link rel="stylesheet" type="text/css" href="../css/style-about.css">
+	<link rel="stylesheet" type="text/css" href="../css/style-prototypes.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 
@@ -58,27 +58,85 @@
 	<div class="container-fluid prototype-details">
 
 		<div class="col-md-12">
-			<h1 class="prototype-name">Prototype 1</h1>
+			<h1 class="prototype-name">Prototype 3</h1>
 		</div>
 
 		<div class="col-md-12 summary">
-			This was prototype 3.
+			In the third prototype, we had to make ONE change to an existing game, and examine what impact it had on the playing experience and game structure. We chose the classic game of chess, a two-player strategy board game.
 		</div>
 
 		<div class="container-fluid text-segment">
-			<div class="col-md-8">
+			<div class="col-md-12">
 				<h3>Introduction</h3>
-				<p>Proin sed metus fringilla, porta eros id, scelerisque ipsum. Vestibulum mauris est, tincidunt sit amet eleifend consequat, dignissim et arcu. Nam et condimentum dui. Maecenas tellus velit, ultrices vel est eget, placerat porttitor mauris. Sed eget lacus quis ante lobortis consequat eget eget quam. Morbi consequat magna libero, in interdum lectus consectetur elementum. Pellentesque a est vitae sem euismod pharetra. Nullam porta rhoncus nulla, non lobortis nulla congue a. Sed posuere faucibus nisi, ac consectetur est facilisis ut.</p>
+				<p>Our initial thought was simple: let’s take the solid game of chess and try to refresh it with a new perspective. Seeing as chess is a very minimalistic game in itself (after knowing the movement of each chess piece, there are almost no other procedures for action), our goal was to keep the core loop of the game simple, but still make it feel new and different. It would also be preferable if the game still had the depth that allows for elaborate strategies to be planned and executed. This essay will cover our experience trying to achieve this in our prototype, while looking at how rule inflation quickly developed for three different iterations of the game.</p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+		<div class="col-md-12">
+			<h3>Zombie Chess</h3>
+			</div>
+		<div class="col-md-8">
+				<p>We first thought about the roles of the chess pieces. Chess is a very balanced game, since both players have the exact same units, and the biggest advantage is going first (which is usually why professional matches are so dependent on who has the first move). But what if you tried to imbalance the options of each player? Instead of both players starting with identical sets of chess pieces, we wanted to give one player the advantage of having the “special” pieces (queen, bishop, knight), and the other player to feel powerful by controlling an entire army of pawns. The result was “Zombie Chess”.</p>
+				<p>The concept of the game goes as follows: One player is in control of a row of “special” pieces (these are the “survivors”). They line up like a usual chess setup, except there are no pawns. The other player controls all pawns, starting on the back two rows of their end of the board. This is the zombie horde. The zombies have two moves per turn, which can be either used by the same piece, or divided among different pawns. Otherwise, pieces move as they usually would in a standard game of chess, and the winning conditions for the zombies were still to eliminate the opposing player’s king. For survivors to win, they would have to eliminate all zombies.</p>
 			</div>
 
 			<div class="col-md-4">
-				<img src="../images/project-temp.jpg" class="prototype-image">
+					<img src="images/prot-3-zombies.jpg" class="prototype-image">
+			</div>
+
+			<div class="col-md-12">
+				
+
+				<p>After the first play test, we quickly realized that the change had brought imbalance to the game. For instance, if a rook made it to the end of the board, they could work their way back to the beginning one row at a time, and since the pawns can only attack forward, they would be indefensible. This required the first rule change: “Once a pawn make it to the end of the board, it is replaced by two new pawns, which are placed in the beginning of the board” (inspired by how pawns promote in regular chess). This way, the survivors would put themselves in a very dangerous position when moving chess pieces towards the spawn of the zombies. It also added an element of defensive strategy to the survivors, since every new pawn would be another step on their path to victory.</p>
+
+				<p>We tested the new rule, and were lucky to find that it worked as intended. The survivors were no longer as overpowered as originally. Unfortunately, the scale had tipped to the other side. It was almost impossible for the survivors to win now. To work around this issue, we looked at how chess is usually played. Strategy games requires planning, setting up traps, and reacting to changes in the game. This is possible only because one player is always in control of all their pieces, and can therefore plan several moves ahead. This led us to the idea of adding a third player. Instead of playing 1 vs 1, we decided that two players should control the zombies – but they were not allowed to communicate. In turn-based strategy games, adding an extra brain is usually an improvement, but when players cannot talk and discuss strategies, it instead results in chaos. Even though the change helped making the game easier for the survivors, it was still unbalanced. Our final solution was to change the winning conditions to be point-based, so every round the survivors were alive they would get a point. Players would then play two rounds, one as each role, and the winner would be the one who survived the longest.</p>
+
+				<p>We tried to keep the core-loop of the game intact throughout this iteration of chess, but trying to balance the game still resulted in many new rules. For every new rule added, we would have to iterate over the game and rebalance it by adding new rules, resulting in a snowball effect. This clearly shows how difficult it is to balance asymmetrical games. The game experience felt fresh for players looking for an alternative to chess, but the most enjoyable addition was including a third player in the game. The lack of communication was both hilarious and frustrating to observe and be part of.</p>
 			</div>
 		</div>
 
 		<div class="container-fluid text-segment">
 			<div class="col-md-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum in lacus sed venenatis. Morbi id mauris sed dui convallis egestas. Nullam in nisl purus. Pellentesque ut ligula nec dui pretium tempor ac vel arcu. Donec iaculis luctus pellentesque. Nam nec erat nisi. Donec porttitor tortor augue, at rhoncus mi pretium nec. Donec luctus condimentum elementum. Aenean rutrum velit et convallis euismod. Pellentesque quis ligula quis dui auctor malesuada vel in odio. Nullam tempor sit amet justo vitae fringilla. Nam pretium est mi, sed ultrices diam bibendum et. Aliquam nisi est, auctor in dapibus ac, pretium in nunc. Nulla et lorem turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec commodo rutrum tincidunt.</p>
+				<h3>Random Chess</h3>
+				<p>“Random Chess” was by far the version of the game with the smallest change, but even still forces us to make several new rules to make the game function. Although the ruleset was the exact same as regular chess, the game would start by players having their chess pieces randomly placed on the board based upon two rolls with an 8-sided die. These rolls would determine where the player would place their piece, first roll being which number/row, and second roll being the letter/column.</p>
+
+				<p>This small change already required new regulations to be made. What if a piece already occupied the space? We overcame this rule simply by making players role again, but it is a clear example of how one rule quickly lead to another. Our second challenge showed when starting the game. Because of the random placement, players could encounter a situation where they would start the game and already be checkmate. Basically, you have lost the game before it even began. A new rule had to be applied, this time we decided that the king could not be taken in the first round, thus giving each player one move to void a possible check mate.</p>
+
+				<p>The game itself is not very enjoyable, and we were quickly convinced that this was not the version we were looking for. However, the game clearly shows that even the smallest change might lead to a reiteration of the rules, and demonstrates how time has shaped chess into the perfectly balanced game it is today.</p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Final Prototype</h3>
+			</div>
+			<div class="col-md-8">
+				<p>For the final version of the game we looked at the board. We did not want to change the shape or size of it, but thought it could be made a more influential element of chess. Thus began our journey of changing the way chess pieces move to depend on the position on the board rather than their type. We did not want a bishop to be a bishop because of its shape. Instead, we wanted any chess piece to be a bishop when it was standing on a specific square. This would add an extra level of complications when trying to planning your future moves.</p>
+
+				<p> We used a special set of playing cards to function as our board. Each card had specific properties, such as color, the number of figures on the card, and their shape. Using the cards allowed us to change the chessboard on-the-fly, and gave us the idea of swapping out a square every time a player moved a chess piece. To add to the level of strategy, we decided to let players know what the upcoming card was. This would force players to think about what piece to move, as they would essentially place the upcoming card on the board. Powerful cards should be kept close to own pieces, but also needed to be usable for taking out enemies.</p>
+			</div>
+
+			<div class="col-md-4">
+				<img src="images/prot-3-final-game.jpg" class="prototype-image">
+			</div>
+
+			<div class="col-md-12">
+				<p>These new rules were just the beginning of what eventually became the most complicated game of chess on this Earth. Due to the many different properties of the cards, we were pushed towards adding more rules, which then needed more rules for balancing. The final game was enjoyable, but still very confusing, and only further emphasizes why the challenge of changing only one thing was presented in the first place.</p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Conclusion</h3>
+				<p>Being tasked with only make one change proved to be extremely difficult. There is a reason existing games have the ruleset they do, since hours and hours of playtesting have gone into balancing the game and evaluating decisions. Making a single change is therefore not so simple, especially not in chess, which is such a perfect and minimalistic game to begin with. Trying to add depth usually leads to rule inflation and complications, so one has to make sure to thread carefully when reinventing an already fantastic game.</p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Resources</h3>
+				<a href="files/prot-3-presentation.pdf">PROTOTYPE PRESENTATION</a>
 			</div>
 		</div>
 

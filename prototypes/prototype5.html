@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html id="front-html">
+<html id="front-html" class="prototype5">
 
 <head>
 	<meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
 	<link rel="shortcut icon" href="../images/website-icon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
-	<link rel="stylesheet" type="text/css" href="../css/style-about.css">
+	<link rel="stylesheet" type="text/css" href="../css/style-prototypes.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 
@@ -58,27 +58,57 @@
 	<div class="container-fluid prototype-details">
 
 		<div class="col-md-12">
-			<h1 class="prototype-name">Prototype 1</h1>
+			<h1 class="prototype-name">Prototype 5</h1>
 		</div>
 
 		<div class="col-md-12 summary">
-			This was prototype 5.
+			The fifth prototype was the beginning of the final project of the course. Our task was to prototype the core loop of our game, to get an initial feeling of whether our idea could create the player experience we wanted. After a few failed prototypes, we settled on the game of “JuiceBoost”.
 		</div>
 
 		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Final Game</h3>
+			</div>
+
 			<div class="col-md-8">
-				<h3>Introduction</h3>
-				<p>Proin sed metus fringilla, porta eros id, scelerisque ipsum. Vestibulum mauris est, tincidunt sit amet eleifend consequat, dignissim et arcu. Nam et condimentum dui. Maecenas tellus velit, ultrices vel est eget, placerat porttitor mauris. Sed eget lacus quis ante lobortis consequat eget eget quam. Morbi consequat magna libero, in interdum lectus consectetur elementum. Pellentesque a est vitae sem euismod pharetra. Nullam porta rhoncus nulla, non lobortis nulla congue a. Sed posuere faucibus nisi, ac consectetur est facilisis ut.</p>
+				<p>The final game is an agon-focused, competitive multiplayer game, where up to four players take on the role as oranges, and one player is a shopper at a super market. The oranges start on the end of the conveyor belt at the cash register, and are racing to the finish line in the other end before time runs out. At the same time, the shopper is throwing objects at the belt, creating obstacles for the oranges. Players are able to jump, and can use some of the items to their assistance (for instance, a cheese can be used as a ramp, and a meat package can be used as a trampoline). After each round the players get points based on their performance, and once all five round have been completed the player with most points win.</p>
 			</div>
 
 			<div class="col-md-4">
-				<img src="../images/project-temp.jpg" class="prototype-image">
+				<img src="images/prot-5-logo.jpg" class="prototype-image">
 			</div>
 		</div>
 
 		<div class="container-fluid text-segment">
 			<div class="col-md-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum in lacus sed venenatis. Morbi id mauris sed dui convallis egestas. Nullam in nisl purus. Pellentesque ut ligula nec dui pretium tempor ac vel arcu. Donec iaculis luctus pellentesque. Nam nec erat nisi. Donec porttitor tortor augue, at rhoncus mi pretium nec. Donec luctus condimentum elementum. Aenean rutrum velit et convallis euismod. Pellentesque quis ligula quis dui auctor malesuada vel in odio. Nullam tempor sit amet justo vitae fringilla. Nam pretium est mi, sed ultrices diam bibendum et. Aliquam nisi est, auctor in dapibus ac, pretium in nunc. Nulla et lorem turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec commodo rutrum tincidunt.</p>
+				<h3>Play Experience</h3>
+				<p>Our original goal was to create an asymmetrical multiplayer game, where one player would have a different role in the game, but would still be competing. After adding support for multiple orange-players, we changed the focus to be on the competitiveness of the oranges instead. The player throwing obstacles onto the conveyor belt has become more of a game facilitator than an actual player. We still aimed at making the person feel powerful, and tried to keep in the strategic choices by letting the player select what items to throw and where to throw them, but to make it more accessible, we also added the possibility of throwing randomly chosen objects. This gave the player a choice of how they wanted to facilitate the game; either as a relaxed (almost AI-controlled) facilitator, or a very engage facilitator, aiming at creating specific experiences for the players.</p>
+				<p>From the beginning, we had a goal of making sure the players controlling the oranges felt agile and quick. After many iterations on the controls we ended up with a great balance of physics-based rolls, which were still responsive enough for players to be in control all the time. Our biggest change came in the jump mechanic. It was initially possible for the oranges to jump whenever, but this led to a huge imbalance in the game, as the obstacles could easily be jumped. Therefore, we gave the ability a cooldown, forcing players to wait a few seconds before being able to jump again. This was a very important step in the competitiveness aspect of the game, as the previous versions did not have much player interaction. Because of the limited impact the obstacles had on the players, once one player was in front of the pack they would be almost unstoppable, and it would not be possible for other players to catch up. The recharge of the jump mechanic made sure that players had to utilize the jump mechanic at the right time to keep their speed. This resulted in players constantly overtaking each other, and showed us the level of engagement and competitiveness we were going for. </p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Game Loop</h3>
+				<p>The core loop of JuiceBoost did not change much since the original prototype. In this first iteration, one player would try to get to the finish line in less than 15 seconds, while another player would be dropping items on the cash register. However, the structure of each play session has been updated. The game is now round based, so players will compete in five rounds during the course of one game. Because the game is now point based, players must navigate the line between being fast and being safe, as falling off the level will result in zero points and might take away their current lead. The final game loop for the oranges has been illustrated below (while the oranges are moving and avoiding obstacles, the shopper will simply be throwing obstacles):</p>
+			</div>
+
+			<div class="col-md-12">
+				<img src="images/prot-5-game-loop.jpg" class="prototype-image">
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Conclusion</h3>
+				<p>Even though the core loop of "JuiceBoost" has not changed a lot since the first prototype, it is the fine tuning of the mechanics that leads to the play experience. After limiting the scope of the game to focus on the competitiveness of the players instead of the assymmetrical gameplay, we were able to get much closer to the intended outcome. Prototyping led the way to some key design decisions, and has really shown how important it can be to take an element from the game, strip it from everything else than what we are examining, and test it solely for the purpose of that element. "JuiceBoost" ends up being the entertaining game we hoped for, with room for improvement regarding the role as a shopper.</p>
+			</div>
+		</div>
+
+		<div class="container-fluid text-segment">
+			<div class="col-md-12">
+				<h3>Resources</h3>
+				<a href="files/prot-5-report.pdf">TEST DOCUMENT</a>
 			</div>
 		</div>
 
