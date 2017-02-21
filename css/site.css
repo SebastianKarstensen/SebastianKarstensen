@@ -187,10 +187,6 @@ header {
 	padding: 20px 0;
 }
 
-.project.prototype:hover {
-	background: rgba(11, 53, 119, 0.6);
-}
-
 .project {
 	color: var(--white);
 	background-color: var(--transparent-black);
@@ -223,26 +219,6 @@ header {
 }
 /*-------------------------------------*/
 
-
-/*Prototypes*/
-/*-------------------------------------*/
-.prototype-details {
-	color: var(--white);
-}
-
-.prototype-name {
-	text-align: center;
-}
-
-.text-segment {
-	margin: 20px 0;
-}
-
-.prototype-image {
-	width: 100%;
-	border: 2px solid var(--white);
-}
-/*-------------------------------------*/
 
 /*Videos*/
 /*-------------------------------------*/
